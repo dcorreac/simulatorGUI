@@ -149,7 +149,7 @@ def game_simulator(team1, team2):
                 
                 
     
-                file.write(str(oppTeamTOV)+  "\n")
+                
                 cof1 = 100* (FGA/(FGA+(TOV+oppTeamTOV)/2)) #percent of possesions that result in shot attempt. 
                 rand1 = random.randint(1,101) 
                 if(cof1 >= rand1):
