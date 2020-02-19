@@ -1,0 +1,12 @@
+pennsylvania: 24.0% chance of winning
+villanova: 76.0% chance of winning
+
+virginia: 87.0% chance of winning
+purdue: 13.0% chance of winning
+
+notre-dame: 8.0% chance of winning
+maryland: 92.0% chance of winning
+
+
+ohio-state: 78.0% chance of winning
+north-carolina: 22.0% chance of winning

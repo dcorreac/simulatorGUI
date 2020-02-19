@@ -12,7 +12,7 @@ def game_simulator(team1, team2):
     file = open('out.txt', 'w')
     team1score = 0 
     team2score = 0 
-    url = 'https://www.sports-reference.com/cbb/schools/' +team1 + '/2019.html#all_per_game'
+    url = 'https://www.sports-reference.com/cbb/schools/' +team1 + '/2020.html#all_per_game'
     page = requests.get(url)
     f = open('downloaded.html','w', encoding = "utf-8")
     f.write(page.text)
@@ -69,7 +69,7 @@ def game_simulator(team1, team2):
     boxScore['Name'] = data['Name']
     boxScore = boxScore.fillna(0)
 
-    url = 'https://www.sports-reference.com/cbb/schools/' +team2 + '/2019.html#all_per_game'
+    url = 'https://www.sports-reference.com/cbb/schools/' +team2 + '/2020.html#all_per_game'
     page = requests.get(url)
     f = open('downloaded.html','w', encoding = "utf-8")
     f.write(page.text)
@@ -124,7 +124,7 @@ def game_simulator(team1, team2):
     
 
     for ghe in range(0,1):
-        time = 40*60 
+        time = 50*60 
         score1 = 0
         score2 = 0 
         turnovers1 = 0
@@ -436,10 +436,15 @@ def game_simulator(team1, team2):
             time = time - 15 
             if(time <= 0 and (score1 == score2)):
                 time == time + 5
+        
+        
+        if(score1 >= score2):
+            return team1
+        else:
+            return team2
 
-
-        file.write(str(score1)+  "\n")
-        file.write(str(score2)+  "\n")
+        file.write(team1+ ": " + str(score1)+  "\n")
+        file.write(team2+ ": " +str(score2)+  "\n")
         file.write(str(boxScore)+  "\n")
         file.write(str(boxScore2)+  "\n")
         file.close()

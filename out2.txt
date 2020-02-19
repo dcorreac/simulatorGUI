@@ -1,0 +1,2 @@
+santa-clara: 75.0% chance of winning
+pepperdine: 25.0% chance of winning
